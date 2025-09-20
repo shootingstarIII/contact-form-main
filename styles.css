@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/fonts/static/Karla-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/fonts/static/Karla-Bold.ttf');
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+main {
+    margin: auto;
+    padding: 2rem 1rem;
+    background-color: var(--green-200);
+}
+
+.contact-form > div {
+    margin-top: 1rem;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 690px;
+    padding: 1.5rem;
+    margin: auto;
+    border-radius: 1rem;
+    background: var(--white-color);
+}
+
+.contact-form h1 {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 100%;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form select {
+    display: block;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 40rem) {
+    main {
+        height: 100vh;
+    }
+    .contact-form {
+        padding: 2.5rem;
+    }
+        .contact-form > div:nth-of-type(1),
+        .contact-form > div:nth-of-type(2),
+        .contact-form .radio-group {
+        display: inline-block;
+        width: 49%;
+    }
+    .contact-form > div:nth-of-type(2),
+    fieldset > .radio-group:nth-of-type(2) {
+        float: right;
+    }
+}
+
+.contact-form input:hover,
+.contact-form input:focus,
+.radio-group:hover,
+.radio-group:focus {
+    outline: none;
+    border: 1px solid var(--green-600);
+    cursor: pointer
+}
+
+.contact-form input[id*="consent"]:hover,
+.contact-form input[id*="consent"]:focus,
+.contact-form input[id*="consent"] + label:hover,
+.contact-form input[id*="consent"] + label:focus {
+    outline: none;
+    cursor: pointer
+}
+
+.contact-form button:hover,
+.contact-form button:focus {    
+    cursor: pointer;
+    background: var(--green-dark);
+}
+
+.contact-form label,
+legend {
+    font-family: 'Karla';
+    font-style: normal;
+    color: var(--green-dark);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+legend {
+    margin-top: 1rem;
+}
+
+.contact-form label > span,
+legend > span {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    color: var(--green-600);
+}
+
+.contact-form input {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--grey-500);
+    border-radius: 8px;
+}
+
+.contact-form input[id*="consent"],
+.contact-form input[id*="consent"] + label {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle
+}
+
+.contact-form input[type=radio] {
+    accent-color: var(--green-600);
+}
+
+.signup-form input[id*="consent"] + label {
+    width: 80%;
+}
+
+.contact-form input[type="checkbox"] {
+    padding: 0;
+    margin-right: 1rem;
+    border-radius: 0;
+    width: 18px;
+    height: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.contact-form input[type="checkbox"]:checked {
+    background: url('assets/images/icon-checkbox-check.svg') no-repeat center;
+}
+
+.radio-group:has(input[type="radio"]:checked) {
+    border: 1px solid var(--green-600);
+    background-color: var(--green-200);
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 240px;
+    padding: 0.75rem 1.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--grey-500);
+    border-radius: 8px;
+    resize: none;
+}
+
+@media screen and (min-width: 40rem) {
+    .contact-form textarea {
+        height: 132px;
+    }
+}
+
+fieldset {
+    border: none;
+    border: 0;
+    padding: 0;
+    margin-top: 1rem;
+    min-width: 0;
+}
+
+.radio-group {
+    width: 100%;
+    border: 1px solid var(--grey-500);
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+    margin-top: 0.8rem;
+}
+
+.radio-group input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    padding: 12px 24px;
+    width: 18px;
+    height: 18px;
+    opacity: 0.5;
+    vertical-align: sub;
+}
+
+.radio-group label {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    margin-left: 0.75rem;
+}
+
+
+@media screen and (min-width: 40rem) {
+    .contact-form > div:last-of-type {
+        margin: 2.5rem 0;
+    }
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem 2.5rem;
+    background: var(--green-600);
+    border-radius: 0.5rem;
+    border: none;
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 150%;
+}
+
+:root {
+    --grey-900: #434343;
+    --grey-500: #86A2A5;
+    --white-color: #FFFFFF;
+    --green-600: #0C7D69;
+    --green-dark: #2A4144;
+    --green-200: #E0F1E8;
+    --red-color: #D73C3C;
+}
