@@ -26,7 +26,7 @@ main {
 }
 
 .contact-form > div {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .contact-form {
@@ -44,6 +44,7 @@ main {
     font-weight: 700;
     font-size: 2rem;
     line-height: 100%;
+    color: var(--green-dark);
 }
 
 .contact-form label,
@@ -54,11 +55,20 @@ main {
     width: 100%;
 }
 
+.contact-form input:not([type="checkbox"]) {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 12px 24px;
+gap: 16px;
+}
+
 @media screen and (min-width: 40rem) {
     main {
-        height: 100vh;
+        height: 100%;
     }
     .contact-form {
+        margin-top: 8rem;
         padding: 2.5rem;
     }
         .contact-form > div:nth-of-type(1),
@@ -121,7 +131,7 @@ legend > span {
 }
 
 .contact-form input {
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 1.5rem;
     border: 1px solid var(--grey-500);
     border-radius: 8px;
 }
@@ -181,7 +191,7 @@ fieldset {
     border: none;
     border: 0;
     padding: 0;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     min-width: 0;
 }
 
